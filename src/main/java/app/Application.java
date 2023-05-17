@@ -62,7 +62,7 @@ public class Application {
 //		partecipazioneD.update(partecipazione);
 //		partecipazioneD.update(partecipazione2);
 
-		Evento trovato = ed.getById(UUID.fromString("33b853a1-3654-4035-a1c5-c3bccabee918"));
+		Evento trovato = ed.getById(UUID.fromString("e482c896-c52f-4ea3-9b73-aba04e64bb28"));
 
 		if (trovato != null) {
 

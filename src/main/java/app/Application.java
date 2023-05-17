@@ -55,7 +55,12 @@ public class Application {
 
 		Evento trovato = ed.getById(UUID.fromString("33b853a1-3654-4035-a1c5-c3bccabee918"));
 
-		log.info(trovato.getListaPartecipazioni().toString());
+		if (trovato != null) {
+
+			log.info(trovato.getListaPartecipazioni().toString());
+		} else {
+			log.info("Evento non trovato!");
+		}
 
 		em.close();
 		emf.close();

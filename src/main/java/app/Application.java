@@ -38,20 +38,29 @@ public class Application {
 		Location location = new Location("Arena di Verona", "Verona");
 
 		Partecipazione partecipazione = new Partecipazione(null, null, StatoPartecipazione.CONFERMATA);
+		Partecipazione partecipazione2 = new Partecipazione(null, null, StatoPartecipazione.DA_CONFERMARE);
 
 		Persona aldo = new Persona("Aldo", "Baglio", "Aldo.baglio@gmail.com", LocalDate.of(1980, 5, 13),
-				SessoPersona.MASCHIO, new HashSet<Partecipazione>(Arrays.asList(partecipazione)));
+				SessoPersona.MASCHIO, new HashSet<Partecipazione>(Arrays.asList(partecipazione, partecipazione2)));
+
+		Persona giovanni = new Persona("Giovanni", "Storti", "Giovannino.storti@gmail.com", LocalDate.of(1965, 10, 13),
+				SessoPersona.MASCHIO, new HashSet<Partecipazione>(Arrays.asList(partecipazione, partecipazione2)));
 
 		Evento festivalBar = new Evento("Festival Bar", LocalDate.of(2023, 8, 16), "bellissimoo", TipoEvento.PUBBLICO,
-				1000, new HashSet<Partecipazione>(Arrays.asList(partecipazione)), location);
+				1000, new HashSet<Partecipazione>(Arrays.asList(partecipazione, partecipazione2)), location);
 
 //		ld.save(location);
 //		partecipazioneD.save(partecipazione);
+//		partecipazioneD.save(partecipazione2);
 //		ed.save(festivalBar);
 //		personaD.save(aldo);
+//		personaD.save(giovanni);
 //		partecipazione.setPersona(aldo);
+//		partecipazione2.setPersona(giovanni);
 //		partecipazione.setEvento(festivalBar);
+//		partecipazione2.setEvento(festivalBar);
 //		partecipazioneD.update(partecipazione);
+//		partecipazioneD.update(partecipazione2);
 
 		Evento trovato = ed.getById(UUID.fromString("33b853a1-3654-4035-a1c5-c3bccabee918"));
 
